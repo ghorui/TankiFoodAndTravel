@@ -12,6 +12,13 @@ namespace TankiFoodAndTravel.Models
         public string PhoneNumber { get; set; }
         public bool TwoFactor { get; set; }
         public bool BrowserRemembered { get; set; }
+        public string FirstName { get; set; }
+        public string MiddleName { get; set; }
+        public string LastName { get; set; }
+        public string FacebookLink { get; set; }
+        public string InstagramLink { get; set; }
+        public string TweeterLink { get; set; }
+
     }
 
     public class ManageLoginsViewModel

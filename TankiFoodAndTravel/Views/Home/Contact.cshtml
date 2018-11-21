@@ -1,17 +1,24 @@
-﻿@{
-    ViewBag.Title = "Contact";
+﻿
+@{
+                /**/
+
+                ViewBag.Title = "Contact2";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+@model IEnumerable<TankiFoodAndTravel.Models.ContactUs>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+<h2>Contact Us</h2>
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+<table border="0">
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td> Country : </td>
+            <td>@Html.Label(@item.CountryName)</td>
+            <td> State : </td>
+            <td>@Html.Label(@item.State)</td>
+            <td> City : </td>
+            <td>@Html.Label(@item.City)</td>
+        </tr>
+    }
+
+</table>
